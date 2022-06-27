@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*
+Color
+
+#272a31  black
+#ec5242  orange
+#d3d3d3  white
+*/
+
+/* 
+font 
+cocogoose
+lato */
+
+nav {
+  display: flex;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  margin: 10px 20px;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 6px;
+  margin: 5px auto;
+  background-color: #272727;
+  border-radius: 20px;
+}
+
+.menu {
+  position: fixed;
+  left: -100%;
+  top: 50px;
+  gap: 0;
+  flex-direction: column;
+}
+
+.menu.active {
+  left: 30%;
+  justify-content: center;
+  justify-items: center;
+}
+
+
+.working_on-it {
+  display: none;
+}
