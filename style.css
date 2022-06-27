@@ -28,14 +28,24 @@ Color
 #d3d3d3  white
 */
 
+/* ############## HEADER ############## */
+
+header {
+  height: 100vh;
+  width: 100%;
+  background: url('img/bg-header.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  border-radius: 0 0 100px 0;
+}
+
 nav {
   display: flex;
 }
 
-.hamburger {
+.burger {
   display: block;
   cursor: pointer;
-  position: fixed;
   margin: 10px 20px;
 }
 
@@ -48,15 +58,6 @@ nav {
   border-radius: 20px;
 }
 
-/* .bg_menu {
-  background-color: #272727;
-  width: 90%;
-  height: 80vh;
-  margin: 50px auto;
-  position: ;
-  left: -80%;
-} */
-
 .menu {
   position: fixed;
   left: -100%;
@@ -65,24 +66,115 @@ nav {
   flex-direction: column;
 }
 
-.menu-link {
+.nav-item {
+  margin-top: 20px;
+}
+
+.nav-item {
   color: #d3d3d3;
-  margin-top: 10px;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
-  font-weight: 300;
-  justify-content: space-between;
+  font-weight: 700;
+  margin-left: 40%;
+}
+
+.menu-link {
+  color: #d3d3d3;
 }
 
 .menu.active {
   left: 0;
   background-color: #272727;
-  width: 90%;
-  height: 80vh;
-  margin: 5px auto;
-  
+  width: 100%;
+  height: 100vh;
 }
+
+.nav-button {
+  border: 3px solid #ec5242;
+  padding: 16px;
+  margin: 10px auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.button-1 {
+  color: #ec5242;
+}
+
+/* ############## Info ############## */
+.info {
+  margin-top: 100px;
+}
+
+.info h1 {
+  color: #ec5242;
+  font-family:  'Lato', sans-serif;
+  margin-left: 30px;
+}
+
+.info h2 {
+  margin-left: 10%;
+  margin-top: 40px;
+  text-align: center;
+  width: 80%;
+  font-family: 'COCOGOOSE', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #272727;
+}
+
+.info .info_border {
+  width: 80%;
+  margin: 20px 5%;
+  font-family:  'Lato', sans-serif;
+  font-size: 12px;
+  background-color: #d3d3d3;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 8px;
+  color: #272727;
+}
+
+/* ############## Main Program ############## */
+
+body {
+  background: url('img/bg-program.jpg');
+}
+.program {
+  width: 100%;
+  height: 100vh;
+  margin-top: -100px;
+}
+
+.inside_program {
+  width: 90%;
+  margin: auto;
+  margin-top: 130px;
+}
+
+.program_title{
+  text-align: center;
+}
+
+.ul-inside_program {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+
+
+
+
 
 .working_on-it {
   display: none;
+}
+
+@media (min-width: 768px) {
+  * {
+    display: none;
+  }
 }
