@@ -20,6 +20,17 @@ a {
   text-decoration: none;
 }
 
+.hr-title {
+  border-color: #ec5242;
+  width: 15%;
+  margin: 0 auto;
+}
+
+.hr-equestrian {
+  width: 10%;
+  border-color: #414246;
+}
+
 /*
 Color
 
@@ -141,7 +152,6 @@ body {
 
 .program {
   width: 100%;
-  height: 100vh;
   margin-top: -100px;
 }
 
@@ -157,7 +167,6 @@ body {
   font-family: 'COCOGOOSE', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
-  border-bottom: 1px solid #ec5242;
 }
 
 .ul-inside_program {
@@ -201,7 +210,6 @@ body {
   color: #d3d3d3;
   background-color: #ec5242;
   padding: 30px;
-  width: 70%;
   margin: 40px auto;
   text-align: center;
   font-family: 'COCOGOOSE', sans-serif;
@@ -214,7 +222,7 @@ body {
 .equestrian {
   border-radius: 100px 0 0 0;
   background: #fff;
-  margin-top: 100px;
+  margin-top: 60px;
   padding-bottom: 100px;
 }
 
@@ -230,11 +238,11 @@ body {
   font-family: 'COCOGOOSE', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
-  border-bottom: 1px solid #ec5242;
 }
 
 .equestrian img {
   width: 100px;
+  height: 100px;
 }
 
 .equestrian-li {
@@ -250,15 +258,49 @@ body {
 .more {
   display: block;
   width: 60%;
-  margin: 60px auto 0 auto;
+  margin: 60px auto;
   background: #fff;
   border: 1px solid #272727;
   font-size: 15px;
   padding: 10px;
 }
 
-.fa-angle-down {
+.fa {
   color: #ec5242;
+}
+
+/* ############## partner ############## */
+
+.partner {
+  background: #414246;
+  border-radius: 0 100px 0 0;
+  margin-top: -100px;
+}
+
+.partner_title {
+  padding-top: 50px;
+  color: #d3d3d3;
+  text-align: center;
+  font-family: 'COCOGOOSE', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.ul-partner {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+
+.ul-partner li {
+  flex-direction: row;
+}
+
+.icone_partner {
+  width: auto;
+  height: 30px;
 }
 
 .working_on-it {
