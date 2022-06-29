@@ -22,7 +22,7 @@ a {
 
 .hr-title {
   border-color: #ec5242;
-  background-color:#ec5242;
+  background-color: #ec5242;
   width: 15%;
   margin: 0 auto;
 }
@@ -360,7 +360,7 @@ body {
     background-size: 100% 100%;
   }
 
-  .bg_menu{
+  .bg_menu {
     width: 100%;
     margin-left: -100px;
   }
