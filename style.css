@@ -28,7 +28,7 @@ a {
 
 .hr-equestrian {
   width: 5%;
-  background-color:  #414246;
+  background-color: #414246;
   border-color: #414246;
 }
 
@@ -344,7 +344,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
   /* ############## HEADER ############## */
 
   header {
@@ -379,7 +378,6 @@ body {
   .menu-link {
     color: #272727;
   }
-
 
   .nav-button {
     width: 20%;
@@ -425,7 +423,7 @@ body {
     margin-left: 0;
   }
 
-  .ul-program .ul-inside_program{
+  .ul-program .ul-inside_program {
     width: 30%;
   }
 
@@ -450,12 +448,12 @@ body {
     margin: 0 auto;
   }
 
-  .equestrian-ul{
+  .equestrian-ul {
     display: grid;
     grid-template-columns: 47% 6% 47%;
     grid-gap: 20px;
   }
-  
+
   .equestrian .left {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -465,5 +463,6 @@ body {
     grid-column-start: 3;
     grid-column-end: 4;
   }
+
   /* ############## partner ############## */
 }

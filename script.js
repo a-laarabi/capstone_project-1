@@ -68,7 +68,7 @@ more.addEventListener('click', () => {
     for (let i = 0; i < equestrian.length; i += 1) {
       const newLi = document.createElement('li');
       newLi.classList.add('equestrian-li');
-      newLi.classList.add(equestrian[i].position)
+      newLi.classList.add(equestrian[i].position);
       newLi.innerHTML = `
         <img src="${equestrian[i].image}" alt="${equestrian[i].name}">
           <ul>
