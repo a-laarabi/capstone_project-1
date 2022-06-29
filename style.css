@@ -42,12 +42,13 @@ Color
 /* ############## HEADER ############## */
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: url('img/bg-header.jpg');
   background-size: auto 100%;
   background-repeat: no-repeat;
   border-radius: 0 0 100px 0;
+  padding-bottom: 50px;
 }
 
 nav {
@@ -72,9 +73,23 @@ nav {
 .menu {
   position: fixed;
   left: -100%;
-  top: 50px;
   gap: 0;
   flex-direction: column;
+  padding-top: 50px;
+}
+
+.close-btn {
+  cursor: pointer;
+  position: inherit;
+  right: -100%;
+  top: 20px;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: #d3d3d3;
+}
+
+.close-btn.active {
+  right: 40px;
 }
 
 .nav-item {
@@ -115,7 +130,7 @@ nav {
 /* take a look at this
 https://stackoverflow.com/questions/64119074/how-to-give-background-image-for-h1-tag */
 .info {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .info h1 {
@@ -125,14 +140,19 @@ https://stackoverflow.com/questions/64119074/how-to-give-background-image-for-h1
 }
 
 .info h2 {
+  background-image: url('img/bg.webp');
+  background-size: 100%;
+  line-height: 2;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-left: 10%;
   margin-top: 40px;
   text-align: center;
   width: 80%;
   font-family: 'COCOGOOSE', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #272727;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #f9452e;
 }
 
 .info .info_border {
