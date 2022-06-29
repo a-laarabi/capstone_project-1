@@ -111,6 +111,9 @@ nav {
 }
 
 /* ############## Info ############## */
+
+/* take a look at this
+https://stackoverflow.com/questions/64119074/how-to-give-background-image-for-h1-tag */
 .info {
   margin-top: 100px;
 }
@@ -147,7 +150,10 @@ nav {
 /* ############## Main Program ############## */
 
 body {
-  background: url('img/bg-program.jpg');
+  background: #272a31;
+  background-image: url(img/bg_program.jpeg);
+  background-size: 100%;
+  background-blend-mode: darken;
 }
 
 .program {
