@@ -86,6 +86,10 @@ body {
   background-size: 100% 100%;
 }
 
+.buenos:hover {
+  background-image: linear-gradient(to right, rgba(151, 42, 22, 0.3), rgba(151, 42, 22, 0.3)), url(../img/Show-Jumping-2021.webp);
+}
+
 .inside-buenos {
   padding-top: 150px;
   padding-bottom: 150px;
@@ -99,6 +103,10 @@ body {
   background-image: linear-gradient(to right, rgba(151, 42, 22, 0.6), rgba(151, 42, 22, 0.6)), url(../img/dressage_2020.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+.warsaw:hover {
+  background-image: linear-gradient(to right, rgba(151, 42, 22, 0.3), rgba(151, 42, 22, 0.3)), url(../img/dressage_2020.jpg);
 }
 
 .inside-warsaw {
@@ -133,4 +141,14 @@ body {
   text-align: center;
   font-size: 20px;
   padding-top: 5px;
+}
+
+@media (min-width: 768px) {
+
+  /* ############## PAST SUMIT ############## */
+  .inside_inside-past_sumitm {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 }

@@ -22,12 +22,13 @@ a {
 
 .hr-title {
   border-color: #ec5242;
+  background-color:#ec5242;
   width: 15%;
   margin: 0 auto;
 }
 
 .hr-equestrian {
-  width: 5%;
+  width: 10%;
   background-color: #414246;
   border-color: #414246;
 }
@@ -51,6 +52,10 @@ header {
   background-repeat: no-repeat;
   border-radius: 0 0 100px 0;
   padding-bottom: 50px;
+}
+
+.logo {
+  display: none;
 }
 
 nav {
@@ -105,6 +110,11 @@ nav {
 
 .menu-link {
   color: #d3d3d3;
+}
+
+.menu-link:hover {
+  color: #ec5242;
+  font-weight: 400;
 }
 
 .menu.active {
@@ -350,22 +360,38 @@ body {
     background-size: 100% 100%;
   }
 
+  .bg_menu{
+    width: 100%;
+    margin-left: -100px;
+  }
+
+  .logo {
+    cursor: pointer;
+    display: inline;
+    height: 50px;
+    z-index: 1;
+    margin-top: 5px;
+    margin-left: 50px;
+  }
+
   .burger {
     display: none;
   }
 
-  .bg_menu {
-    background-color: #fff;
-    z-index: 3;
+  .close-btn {
+    display: none;
   }
 
   .menu {
+    position: relative;
     left: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: end;
+    gap: 20px;
     width: 100%;
-    padding-top: 0;
+    padding: 10px;
     background-color: #fff;
   }
 
@@ -379,6 +405,10 @@ body {
     color: #272727;
   }
 
+  .button-1 {
+    color: #ec5242;
+  }
+
   .nav-button {
     width: 20%;
     margin: 0;
@@ -388,17 +418,21 @@ body {
   .info h1 {
     margin-left: 5%;
     margin-top: 100px;
+    font-size: 2rem;
   }
 
   .info h2 {
     margin-top: 10px;
     margin-left: 5%;
     text-align: left;
+    font-size: 3.2rem;
   }
 
   .info .info_border {
-    width: 40%;
+    margin-top: 50px;
+    width: 60%;
     font-size: 20px;
+    padding: 10px;
   }
 
   /* ############## Main Program ############## */
@@ -461,6 +495,16 @@ body {
   .equestrian .right {
     grid-column-start: 3;
     grid-column-end: 4;
+  }
+
+  .more {
+    width: 250px;
+  }
+
+  .hr-equestrian {
+    width: 15%;
+    background-color: #414246;
+    border-color: #414246;
   }
 
   /* ############## partner ############## */
