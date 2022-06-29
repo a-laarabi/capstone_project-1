@@ -21,56 +21,58 @@ const more = document.querySelector('.more');
 
 const equestrian = [
   {
-    name: 'abdelkebir ouaddar',
-    specialty: 'Show jumping',
-    image: 'img/ouddar.jpeg',
-    age: '20',
-  },
-
-  {
     name: 'Kent Farrington',
     specialty: 'Show jumping',
-    image: 'img/ouddar.jpeg',
-    age: '20',
+    image: 'img/Kent_Farrington.jpeg',
+    age: '41',
+    description: 'professional show jumping rider for the United States. He is one of the top ranked riders in the world.',
   },
 
   {
     name: 'McLain Ward',
     specialty: 'Show jumping',
-    image: 'img/ouddar.jpeg',
-    age: '20',
+    image: 'img/mclain-ward.jpeg',
+    age: '46',
+    description: 'American show jumping competitor and four-time Olympic medalist.',
   },
 
   {
-    name: 'Laura Kraut',
+    name: 'Ashley Nicoll',
+    specialty: 'Dressage',
+    image: 'img/Ashley.jpeg',
+    age: '59',
+    description: 'Canadian-born equestrian specializing in dressage, who has been representing the United States since 2017.',
+  },
+
+  {
+    name: 'Lillie Keenan',
     specialty: 'Show jumping',
-    image: 'img/ouddar.jpeg',
-    age: '20',
+    image: 'img/Lillie-Keenan.jpeg',
+    age: '25',
+    description: 'American show jumping rider. As a junior rider she won the ASPCA Maclay Finals.',
   },
 ];
 
 more.addEventListener('click', () => {
   if (more.textContent === 'MORE ') {
-    for (let i = 0; i < equestrian.length; i++) {
-        const newLi = document.createElement('li');
-        newLi.classList.add('equestrian-li');
-        newLi.innerHTML = `
+    for (let i = 0; i < equestrian.length; i += 1) {
+      const newLi = document.createElement('li');
+      newLi.classList.add('equestrian-li');
+      newLi.innerHTML = `
         <img src="${equestrian[i].image}" alt="${equestrian[i].name}">
           <ul>
             <li><h4>${equestrian[i].name}</h4></li>
             <li><p>${equestrian[i].specialty}</p></li>
             <hr class="hr-equestrian">
             <li>${equestrian[i].age} years old</li>
-            <li>British dressage rider, equestrian and writer. A multiple World and Olympic champion, Dujardin has been described as the dominant dressage rider of her era.</li>
+            <li>${equestrian[i].description}</li>
           </ul>
         `;
-        people.appendChild(newLi);
-        more.innerHTML = `LESS <i class="fa fa-angle-up"></i>`;
+      people.appendChild(newLi);
+      more.innerHTML = 'LESS <i class="fa fa-angle-up"></i>';
     }
-  }
-
-  else if (more.textContent === 'LESS ') {
-      people.innerHTML = `
+  } else if (more.textContent === 'LESS ') {
+    people.innerHTML = `
         <li class="equestrian-li">
           <img src="img/ouddar.jpeg" alt="ouddar">
           <ul>
@@ -93,6 +95,6 @@ more.addEventListener('click', () => {
           </ul>
         </li>
         `;
-        more.innerHTML = `MORE <i class="fa fa-angle-down"></i>`;
-    }
+    more.innerHTML = 'MORE <i class="fa fa-angle-down"></i>';
+  }
 });
