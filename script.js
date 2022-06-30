@@ -8,16 +8,19 @@ const xButton = document.querySelector('.close-btn');
 hamburger.addEventListener('click', () => {
   menu.classList.add('active');
   xButton.classList.add('active');
+  hamburger.classList.add('active');
 });
 
 menuLink.forEach((n) => n.addEventListener('click', () => {
   menu.classList.remove('active');
   xButton.classList.remove('active');
+  hamburger.classList.remove('active');
 }));
 
 xButton.addEventListener('click', () => {
   menu.classList.remove('active');
   xButton.classList.remove('active');
+  hamburger.classList.remove('active');
 });
 
 // ##########  equestrian  ##########

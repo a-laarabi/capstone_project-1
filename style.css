@@ -1,11 +1,6 @@
 @import url('http://fonts.cdnfonts.com/css/cocogoose');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
-/*
-font-family: 'COCOGOOSE', sans-serif;
-font-family: 'Lato', sans-serif;
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +18,7 @@ a {
 .hr-title {
   border-color: #ec5242;
   background-color: #ec5242;
-  width: 15%;
+  width: 5%;
   margin: 0 auto;
 }
 
@@ -33,15 +28,10 @@ a {
   border-color: #414246;
 }
 
-/*
-Color
-
-#272a31  black
-#ec5242  orange
-#d3d3d3  white
-*/
-
 /* ############## HEADER ############## */
+.black_nav {
+  display: none;
+}
 
 header {
   min-height: 100vh;
@@ -54,7 +44,7 @@ header {
   padding-bottom: 50px;
 }
 
-.logo {
+.logo-section {
   display: none;
 }
 
@@ -68,6 +58,10 @@ nav {
   margin: 10px 20px;
 }
 
+.burger.active {
+  display: none;
+}
+
 .bar {
   display: block;
   width: 30px;
@@ -79,10 +73,15 @@ nav {
 
 .menu {
   position: fixed;
-  right: -100%;
-  gap: 0;
-  flex-direction: column;
+  display: none;
   padding-top: 50px;
+}
+
+.menu.active {
+  display: block;
+  background-color: rgba(39, 42, 49, 0.9);
+  width: 100%;
+  height: 100vh;
 }
 
 .close-btn {
@@ -117,13 +116,6 @@ nav {
   font-weight: 400;
 }
 
-.menu.active {
-  right: 0;
-  background-color: #272727;
-  width: 100%;
-  height: 100vh;
-}
-
 .nav-button {
   border: 3px solid #ec5242;
   padding: 16px;
@@ -153,7 +145,6 @@ nav {
   background-image: url('img/bg.webp');
   background-size: 100%;
   background-attachment: fixed;
-  line-height: 2;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-left: 10%;
@@ -178,6 +169,22 @@ nav {
   color: #272727;
 }
 
+.date {
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 1.2rem;
+}
+
+.date h3 {
+  font-family: 'COCOGOOSE', sans-serif;
+  font-weight: 700;
+}
+
+.date h4 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
 /* ############## Main Program ############## */
 
 body {
@@ -188,7 +195,6 @@ body {
 }
 
 .program {
-  width: 100%;
   margin-top: -100px;
 }
 
@@ -355,23 +361,56 @@ body {
 
 @media (min-width: 768px) {
   /* ############## HEADER ############## */
+  .black_nav {
+    background: #3e3e3e;
+    display: block;
+  }
+
+  .inside-black_nav {
+    width: 90%;
+    margin: auto;
+  }
+
+  .black_nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: end;
+    padding: 10px 0;
+  }
+
+  .black_nav-link {
+    color: #fff;
+  }
 
   header {
     background-size: 100% 100%;
   }
 
-  .bg_menu {
-    width: 100%;
-    margin-left: -100px;
+  .navbar {
+    background-color: #fff;
+  }
+
+  .inside-navbar {
+    width: 90%;
+    margin: auto;
+  }
+
+  .logo-section {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    float: left;
   }
 
   .logo {
-    cursor: pointer;
-    display: inline;
-    height: 50px;
-    z-index: 1;
-    margin-top: 5px;
-    margin-left: 50px;
+    width: 50px;
+  }
+
+  .text-logo {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
   }
 
   .burger {
@@ -384,15 +423,12 @@ body {
 
   .menu {
     position: relative;
-    left: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: end;
-    gap: 20px;
-    width: 100%;
-    padding: 10px;
-    background-color: #fff;
+    gap: 2%;
+    padding: 10px 0;
   }
 
   .menu .nav-item {
@@ -417,30 +453,36 @@ body {
 
   .info h1 {
     margin-left: 5%;
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 2rem;
   }
 
   .info h2 {
-    margin-top: 10px;
+    margin-top: 40px;
     margin-left: 5%;
     text-align: left;
     font-size: 3.2rem;
   }
 
   .info .info_border {
-    margin-top: 50px;
+    margin-top: 10px;
     width: 60%;
     font-size: 20px;
     padding: 10px;
   }
 
+  .date {
+    margin-left: 5%;
+  }
+
   /* ############## Main Program ############## */
 
   .ul-program {
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 4px;
   }
 
   .ul-inside_program {
@@ -471,7 +513,7 @@ body {
 
   .hr-program {
     display: block;
-    width: 25%;
+    width: 180px;
     margin: 5px auto;
   }
 
