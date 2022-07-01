@@ -26,6 +26,9 @@
 
 To get a local copy up and running, you should first move to 'domMenu' repository, then clone it into your local machine check this [article](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) for more information.
 
+## Acknowledgements
+
+credit to [Cindy Shin](https://www.behance.net/adagio07), the author of the [original design](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)
 
 ## Author
 
