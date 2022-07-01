@@ -12,7 +12,6 @@ header {
   color: #ec5242;
   font-family: 'Lato', sans-serif;
   text-align: center;
-
 }
 
 .info .info_h2 {
@@ -59,7 +58,6 @@ header {
   border: 2px solid #ededed;
   margin: 50px auto;
 }
-
 
 /* ############## PAST SUMIT ############## */
 
@@ -184,14 +182,9 @@ body {
 /* ############## RIGHTS ############## */
 
 .rights {
-  height: 40px;
   text-align: center;
   font-size: 20px;
   padding-top: 5px;
-  display: block;
-}
-
-.rights {
   display: block;
   background: #f2f2f2;
   height: 100px;
@@ -209,15 +202,10 @@ body {
   gap: 5px;
   float: left;
   color: #272727;
-
 }
 
 .logo {
   width: 50px;
-}
-
-.rights .logo-section {
-  display: flex;
 }
 
 .text-logo {
@@ -235,7 +223,7 @@ body {
   header {
     border-bottom: 2px solid #ededed;
   }
-  
+
   .info h1 {
     display: none;
   }
@@ -264,7 +252,7 @@ body {
     margin: 30px auto 10px auto;
   }
 
-  .past_sumit{
+  .past_sumit {
     padding-bottom: 50px;
   }
 

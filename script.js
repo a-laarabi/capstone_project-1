@@ -47,7 +47,7 @@ const equestrian = [
     description: 'British dressage rider, equestrian and writer. A multiple World and Olympic champion, Dujardin has been described as the dominant dressage rider of her era.',
     position: 'right',
   },
-  
+
   {
     name: 'Kent Farrington',
     specialty: 'Show jumping',
@@ -112,13 +112,13 @@ if (media < 768) {
         </li>
         `;
 
-more.addEventListener('click', () => {
-  if (more.textContent === 'MORE ') {
-    for (let i = 2; i < equestrian.length; i += 1) {
-      const newLi = document.createElement('li');
-      newLi.classList.add('equestrian-li');
-      newLi.classList.add(equestrian[i].position);
-      newLi.innerHTML = `
+  more.addEventListener('click', () => {
+    if (more.textContent === 'MORE ') {
+      for (let i = 2; i < equestrian.length; i += 1) {
+        const newLi = document.createElement('li');
+        newLi.classList.add('equestrian-li');
+        newLi.classList.add(equestrian[i].position);
+        newLi.innerHTML = `
         <img src="${equestrian[i].image}" alt="${equestrian[i].name}">
           <ul>
             <li><h4 class="equestrian-name">${equestrian[i].name}</h4></li>
@@ -128,11 +128,11 @@ more.addEventListener('click', () => {
             <li>${equestrian[i].description}</li>
           </ul>
         `;
-      people.appendChild(newLi);
-      more.innerHTML = 'LESS <i class="fa fa-angle-up"></i>';
-    }
-  } else if (more.textContent === 'LESS ') {
-    people.innerHTML = `
+        people.appendChild(newLi);
+        more.innerHTML = 'LESS <i class="fa fa-angle-up"></i>';
+      }
+    } else if (more.textContent === 'LESS ') {
+      people.innerHTML = `
         <li class="equestrian-li left">
           <img src="img/ouddar.jpeg" alt="ouddar">
           <ul>
@@ -155,10 +155,9 @@ more.addEventListener('click', () => {
           </ul>
         </li>
         `;
-    more.innerHTML = 'MORE <i class="fa fa-angle-down"></i>';
-  }
-});
-
+      more.innerHTML = 'MORE <i class="fa fa-angle-down"></i>';
+    }
+  });
 } else if (media >= 768) {
   for (let i = 0; i < equestrian.length; i += 1) {
     const newLi = document.createElement('li');
@@ -175,7 +174,7 @@ more.addEventListener('click', () => {
         </ul>
       `;
     people.appendChild(newLi);
-}
+  }
 
-      more.parentElement.removeChild(more);
+  more.parentElement.removeChild(more);
 }

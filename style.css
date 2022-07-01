@@ -506,7 +506,7 @@ body {
   .equestrian-li img {
     background-image: url(img/bg_equestrien-opacity.jpg);
   }
-  
+
   .inside_equestrian {
     width: 70%;
     margin: 0 auto;
@@ -548,7 +548,7 @@ body {
     margin-top: -100px;
     padding-bottom: 50px;
   }
-  
+
   .partner_title {
     padding-top: 50px;
     color: #d3d3d3;
@@ -557,7 +557,7 @@ body {
     font-weight: 500;
     font-size: 1.5rem;
   }
-  
+
   .ul-partner {
     display: flex;
     gap: 20px;
@@ -565,15 +565,16 @@ body {
     padding-bottom: 30px;
     justify-content: center;
   }
-  
+
   .ul-partner li {
     flex-direction: row;
   }
-  
+
   .icone_partner {
     width: auto;
     height: 30px;
   }
+
   /* ############## rights ############## */
   .rights {
     display: block;
@@ -588,7 +589,6 @@ body {
 
   .rights .logo-section {
     margin-top: 15px;
-
   }
 
   .rights p {
