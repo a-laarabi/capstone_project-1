@@ -88,7 +88,9 @@ const equestrian = [
 if (media < 768) {
   people.innerHTML = `
         <li class="equestrian-li left">
+          
           <img src="img/ouddar.jpeg" alt="ouddar">
+
           <ul>
             <li><h4 class="equestrian-name">abdelkebir ouaddar</h4></li>
             <li><p class="equestrian-job">Show jumping</p></li>
@@ -96,7 +98,7 @@ if (media < 768) {
             <li class="old">59 years old</li>
             <li>Moroccan equestrian. He competed at the 2016 Summer Olympics in the individual jumping event, in which he tied for 50th place</li>
           </ul>
-      </li>
+        </li>
 
         <li class="equestrian-li right">
           <img src="img/Charlotte_Dujardin.jpeg" alt="Kent Farrington">
