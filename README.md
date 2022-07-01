@@ -42,7 +42,7 @@ credit to [Cindy Shin](https://www.behance.net/adagio07), the author of the [ori
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/a-laarabi/Portfolio_Mobile-version/issues).
+Feel free to check the [issues page](https://github.com/a-laarabi/capstone_project-1/issues).
 
 ## Show your support
 
