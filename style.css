@@ -374,7 +374,7 @@ body {
   .black_nav ul {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
     justify-content: end;
     padding: 10px 0;
   }
@@ -453,12 +453,12 @@ body {
 
   .info h1 {
     margin-left: 5%;
-    margin-top: 50px;
+    margin-top: 100px;
     font-size: 2rem;
   }
 
   .info h2 {
-    margin-top: 40px;
+    margin-top: 15px;
     margin-left: 5%;
     text-align: left;
     font-size: 3.2rem;
@@ -469,6 +469,7 @@ body {
     width: 60%;
     font-size: 20px;
     padding: 10px;
+    background: #f7f7f7;
   }
 
   .date {
@@ -497,6 +498,7 @@ body {
 
   .ul-inside_program p {
     margin-left: 0;
+    text-align: center;
   }
 
   .ul-program .ul-inside_program {
@@ -537,6 +539,10 @@ body {
   .equestrian .right {
     grid-column-start: 3;
     grid-column-end: 4;
+  }
+
+  .bg-img-equestrian {
+
   }
 
   .more {
