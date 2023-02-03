@@ -130,7 +130,7 @@ nav {
 /* ############## Info ############## */
 
 .info {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .info h1 {
@@ -321,12 +321,41 @@ body {
 }
 
 /* ############## partner ############## */
-.partner {
+.partner,
+.rights {
   display: none;
 }
 
-.rights {
-  display: none;
+.partner {
+  background: #414246;
+  border-radius: 0 100px 0 0;
+  margin-top: -100px;
+  padding-bottom: 50px;
+}
+
+.partner_title {
+  padding-top: 50px;
+  color: #d3d3d3;
+  text-align: center;
+  font-family: 'COCOGOOSE', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.ul-partner {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  justify-content: center;
+}
+
+.ul-partner li {
+  flex-direction: row;
+}
+
+.icone_partner {
+  width: auto;
+  height: 30px;
 }
 
 @media (min-width: 768px) {
@@ -423,7 +452,7 @@ body {
 
   .info h1 {
     margin-left: 5%;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     font-size: 2rem;
   }
 
@@ -452,6 +481,22 @@ body {
 
   .ul-inside_program {
     flex-direction: column;
+  }
+
+  .ul-inside_program:nth-child(2) {
+    transition-delay: 100ms;
+  }
+
+  .ul-inside_program:nth-child(3) {
+    transition-delay: 200ms;
+  }
+
+  .ul-inside_program:nth-child(4) {
+    transition-delay: 300ms;
+  }
+
+  .ul-inside_program:nth-child(5) {
+    transition-delay: 400ms;
   }
 
   .ul-inside_program:hover {
@@ -507,15 +552,32 @@ body {
     border-color: #414246;
   }
 
+  .equestrian-li:nth-child(2) {
+    transition-delay: 200ms;
+  }
+
+  .equestrian-li:nth-child(4) {
+    transition-delay: 200ms;
+  }
+
+  .equestrian-li:nth-child(6) {
+    transition-delay: 200ms;
+  }
+
   /* ############## partner ############## */
 
   .partner {
+    display: block;
+    border-radius: 0 100px 0 0;
+  }
+
+  /* .partner {
     display: block;
     background: #414246;
     border-radius: 0 100px 0 0;
     margin-top: -100px;
     padding-bottom: 50px;
-  }
+  } */
 
   .partner_title {
     padding-top: 50px;
@@ -537,11 +599,6 @@ body {
     flex-direction: row;
   }
 
-  .icone_partner {
-    width: auto;
-    height: 30px;
-  }
-
   /* ############## rights ############## */
   .rights {
     background: #f2f2f2;
@@ -553,4 +610,18 @@ body {
   .rights p {
     font-size: 1.3rem;
   }
+}
+
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
