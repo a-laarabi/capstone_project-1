@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+.container {
+  padding: 10%;
+}
+
 .hr-title {
   border-color: transparent;
   background-color: #ec5242;
@@ -44,6 +48,20 @@ header {
 
 .logo-section {
   display: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 5px;
+  float: left;
+  color: #272727;
+}
+
+.logo {
+  width: 50px;
+}
+
+.text-logo {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
 nav {
@@ -246,6 +264,7 @@ body {
   font-family: 'COCOGOOSE', sans-serif;
   font-weight: 100;
   font-size: 1.1rem;
+  width: 80%;
 }
 
 .hr-program {
@@ -308,12 +327,12 @@ body {
 .more {
   cursor: pointer;
   display: block;
-  width: 60%;
-  margin: 60px auto;
+  width: 100%;
+  margin: 40px auto;
   background: #fff;
   border: 1px solid #272727;
   font-size: 15px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .fa {
@@ -359,6 +378,11 @@ body {
 }
 
 @media (min-width: 768px) {
+
+  .container {
+    padding: 5%;
+  }
+
   /* ############## HEADER ############## */
   .black_nav {
     background: #3e3e3e;
@@ -395,21 +419,7 @@ body {
   }
 
   .logo-section {
-    cursor: pointer;
     display: flex;
-    align-items: center;
-    gap: 5px;
-    float: left;
-    color: #272727;
-  }
-
-  .logo {
-    width: 50px;
-  }
-
-  .text-logo {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
   }
 
   .burger {
@@ -452,7 +462,6 @@ body {
 
   .info h1 {
     margin-left: 5%;
-    /* margin-top: 100px; */
     font-size: 2rem;
   }
 
@@ -571,14 +580,6 @@ body {
     border-radius: 0 100px 0 0;
   }
 
-  /* .partner {
-    display: block;
-    background: #414246;
-    border-radius: 0 100px 0 0;
-    margin-top: -100px;
-    padding-bottom: 50px;
-  } */
-
   .partner_title {
     padding-top: 50px;
     color: #d3d3d3;
@@ -605,6 +606,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 35px 0;
   }
 
   .rights p {
