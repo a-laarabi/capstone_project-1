@@ -378,7 +378,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
   .container {
     padding: 5%;
   }
@@ -613,7 +612,6 @@ body {
     font-size: 1.3rem;
   }
 }
-
 
 .hidden {
   opacity: 0;

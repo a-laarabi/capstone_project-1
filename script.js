@@ -81,9 +81,9 @@ const equestrian = [
 const buildToDom = (i, arr) => {
   arr.forEach((element) => {
     const newLi = document.createElement('li');
-        newLi.classList.add('equestrian-li');
-        i >= 768 ? newLi.classList.add('hidden'):'';
-        newLi.innerHTML = `
+    newLi.classList.add('equestrian-li');
+    if (i >= 768) { newLi.classList.add('hidden'); }
+    newLi.innerHTML = `
         <img src="${element.image}" alt="${element.name}">
           <ul>
             <li><h4 class="equestrian-name">${element.name}</h4></li>
@@ -93,25 +93,25 @@ const buildToDom = (i, arr) => {
             <li>${element.description}</li>
           </ul>
         `;
-        people.appendChild(newLi);
-  })
-}
+    people.appendChild(newLi);
+  });
+};
 
-  const windowWidth = window.screen.width;
-  people.innerHTML = '';
-  if (windowWidth < 768) {
-    buildToDom(windowWidth, equestrian.slice(0,2));
-    more.addEventListener('click', () => {
-      if (more.textContent === 'MORE ') {
-        buildToDom(windowWidth, equestrian.slice(2));
-        more.innerHTML = 'LESS <i class="fa fa-angle-up"></i>';
-      } else if (more.textContent === 'LESS ') {
-        people.innerHTML = '';
-        buildToDom(windowWidth, equestrian.slice(0,2));
-        more.innerHTML = 'MORE <i class="fa fa-angle-down"></i>';
-      }
-    })
-  } else {
-    buildToDom(windowWidth, equestrian);
-    more.parentElement.removeChild(more);
-  }
+const windowWidth = window.screen.width;
+people.innerHTML = '';
+if (windowWidth < 768) {
+  buildToDom(windowWidth, equestrian.slice(0, 2));
+  more.addEventListener('click', () => {
+    if (more.textContent === 'MORE ') {
+      buildToDom(windowWidth, equestrian.slice(2));
+      more.innerHTML = 'LESS <i class="fa fa-angle-up"></i>';
+    } else if (more.textContent === 'LESS ') {
+      people.innerHTML = '';
+      buildToDom(windowWidth, equestrian.slice(0, 2));
+      more.innerHTML = 'MORE <i class="fa fa-angle-down"></i>';
+    }
+  });
+} else {
+  buildToDom(windowWidth, equestrian);
+  more.parentElement.removeChild(more);
+}

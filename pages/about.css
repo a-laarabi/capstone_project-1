@@ -76,7 +76,7 @@ header {
 /* about mobile */
 .partner {
   display: block;
-  border-radius: 0 ;
+  border-radius: 0;
   margin-top: 0;
   padding-bottom: 0;
 }
@@ -100,7 +100,7 @@ header {
   .info h2 {
     text-align: center;
   }
-  
+
   /* ############## past_sumit ############## */
   .inside_inside-past_sumitm {
     flex-direction: row;
