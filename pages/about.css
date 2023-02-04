@@ -1,0 +1,122 @@
+body {
+  background: #fff;
+  text-align: center;
+}
+
+header {
+  background: #f7f7f7;
+  border-radius: 0;
+}
+
+.info .info_border {
+  margin: 30px auto;
+  background: #fff;
+  border-color: #e9e9e9;
+}
+
+.intro-hiden {
+  display: none;
+}
+
+.past_logo {
+  border-top: 5px solid #e9e9e9;
+  border-bottom: 5px solid #e9e9e9;
+}
+
+.past_logo img {
+  margin-top: 30px;
+  height: 30vh;
+}
+
+/* ############## past_sumit ############## */
+.intro-past_sumit {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.inside_inside-past_sumitm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.past_events {
+  width: 100%;
+  height: 40vh;
+  background-color: #972a16;
+  color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.buenos {
+  background-image: linear-gradient(to right, rgba(151, 42, 22, 0.6), rgba(151, 42, 22, 0.6)), url(../img/Show-Jumping-2021.webp);
+}
+
+.warsaw {
+  background-image: linear-gradient(to right, rgba(151, 42, 22, 0.6), rgba(151, 42, 22, 0.6)), url(../img/dressage_2020.jpg);
+}
+
+.sumit-year {
+  font-family: 'COCOGOOSE', sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.sumit-intro {
+  margin-top: 15px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+}
+
+/* about mobile */
+.partner {
+  display: block;
+  border-radius: 0 ;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.rights {
+  display: flex;
+  padding: 30px 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rights .logo-section {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .intro-hiden {
+    display: block;
+  }
+
+  .info h2 {
+    text-align: center;
+  }
+  
+  /* ############## past_sumit ############## */
+  .inside_inside-past_sumitm {
+    flex-direction: row;
+  }
+
+  /* ############## rights ############## */
+  .partner {
+    display: none;
+  }
+
+  .rights {
+    background: #2e2e2e;
+    color: #f7f7f7;
+  }
+
+  .rights .text-logo {
+    color: #f7f7f7;
+  }
+}
