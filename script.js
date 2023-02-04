@@ -27,7 +27,6 @@ xButton.addEventListener('click', () => {
 
 const people = document.querySelector('.equestrian-ul');
 const more = document.querySelector('.more');
-const media = window.screen.width;
 
 const equestrian = [
   {
@@ -36,7 +35,6 @@ const equestrian = [
     image: 'img/ouddar.jpeg',
     age: '59',
     description: 'Moroccan equestrian. He competed at the 2016 Summer Olympics in the individual jumping event, in which he tied for 50th place',
-    position: 'left',
   },
 
   {
@@ -45,7 +43,6 @@ const equestrian = [
     image: 'img/Charlotte_Dujardin.jpeg',
     age: '36',
     description: 'British dressage rider, equestrian and writer. A multiple World and Olympic champion, Dujardin has been described as the dominant dressage rider of her era.',
-    position: 'right',
   },
 
   {
@@ -54,7 +51,6 @@ const equestrian = [
     image: 'img/Kent_Farrington.jpeg',
     age: '41',
     description: 'professional show jumping rider for the United States. He is one of the top ranked riders in the world.',
-    position: 'left',
   },
 
   {
@@ -63,7 +59,6 @@ const equestrian = [
     image: 'img/mclain-ward.jpeg',
     age: '46',
     description: 'American show jumping competitor and four-time Olympic medalist.',
-    position: 'right',
   },
 
   {
@@ -72,7 +67,6 @@ const equestrian = [
     image: 'img/Ashley.jpeg',
     age: '59',
     description: 'Canadian-born equestrian specializing in dressage, who has been representing the United States since 2017.',
-    position: 'left',
   },
 
   {
@@ -81,100 +75,43 @@ const equestrian = [
     image: 'img/Lillie-Keenan.jpeg',
     age: '25',
     description: 'American show jumping rider. As a junior rider she won the ASPCA Maclay Finals.',
-    position: 'right',
   },
 ];
 
-if (media < 768) {
-  people.innerHTML = `
-        <li class="equestrian-li left">
-          
-          <img src="img/ouddar.jpeg" alt="ouddar">
-
+const buildToDom = (i, arr) => {
+  arr.forEach((element) => {
+    const newLi = document.createElement('li');
+    newLi.classList.add('equestrian-li');
+    if (i >= 768) { newLi.classList.add('hidden'); }
+    newLi.innerHTML = `
+        <img src="${element.image}" alt="${element.name}">
           <ul>
-            <li><h4 class="equestrian-name">abdelkebir ouaddar</h4></li>
-            <li><p class="equestrian-job">Show jumping</p></li>
+            <li><h4 class="equestrian-name">${element.name}</h4></li>
+            <li><p class="equestrian-job">${element.specialty}</p></li>
             <hr class="hr-equestrian">
-            <li class="old">59 years old</li>
-            <li>Moroccan equestrian. He competed at the 2016 Summer Olympics in the individual jumping event, in which he tied for 50th place</li>
+            <li class="old">${element.age} years old</li>
+            <li>${element.description}</li>
           </ul>
-        </li>
-
-        <li class="equestrian-li right">
-          <img src="img/Charlotte_Dujardin.jpeg" alt="Kent Farrington">
-          <ul>
-            <li><h4 class="equestrian-name">Charlotte Dujardin</h4></li>
-            <li><p class="equestrian-job">Dressage</p></li>
-            <hr class="hr-equestrian">
-            <li class="old">36 years old</li>
-            <li>British dressage rider, equestrian and writer. A multiple World and Olympic champion, Dujardin has been described as the dominant dressage rider of her era.</li>
-          </ul>
-        </li>
         `;
+    people.appendChild(newLi);
+  });
+};
 
+const windowWidth = window.screen.width;
+people.innerHTML = '';
+if (windowWidth < 768) {
+  buildToDom(windowWidth, equestrian.slice(0, 2));
   more.addEventListener('click', () => {
     if (more.textContent === 'MORE ') {
-      for (let i = 2; i < equestrian.length; i += 1) {
-        const newLi = document.createElement('li');
-        newLi.classList.add('equestrian-li');
-        newLi.classList.add(equestrian[i].position);
-        newLi.innerHTML = `
-        <img src="${equestrian[i].image}" alt="${equestrian[i].name}">
-          <ul>
-            <li><h4 class="equestrian-name">${equestrian[i].name}</h4></li>
-            <li><p class="equestrian-job">${equestrian[i].specialty}</p></li>
-            <hr class="hr-equestrian">
-            <li class="old">${equestrian[i].age} years old</li>
-            <li>${equestrian[i].description}</li>
-          </ul>
-        `;
-        people.appendChild(newLi);
-        more.innerHTML = 'LESS <i class="fa fa-angle-up"></i>';
-      }
+      buildToDom(windowWidth, equestrian.slice(2));
+      more.innerHTML = 'LESS <i class="fa fa-angle-up"></i>';
     } else if (more.textContent === 'LESS ') {
-      people.innerHTML = `
-        <li class="equestrian-li left">
-          <img src="img/ouddar.jpeg" alt="ouddar">
-          <ul>
-            <li><h4 class="equestrian-name">abdelkebir ouaddar</h4></li>
-            <li><p class="equestrian-job">Show jumping</p></li>
-            <hr class="hr-equestrian">
-            <li class="old">59 years old</li>
-            <li>Moroccan equestrian. He competed at the 2016 Summer Olympics in the individual jumping event, in which he tied for 50th place</li>
-          </ul>
-      </li>
-
-        <li class="equestrian-li right">
-          <img src="img/Charlotte_Dujardin.jpeg" alt="Kent Farrington">
-          <ul>
-            <li><h4 class="equestrian-name">Charlotte Dujardin</h4></li>
-            <li><p class="equestrian-job">Dressage</p></li>
-            <hr class="hr-equestrian">
-            <li class="old">36 years old</li>
-            <li>British dressage rider, equestrian and writer. A multiple World and Olympic champion, Dujardin has been described as the dominant dressage rider of her era.</li>
-          </ul>
-        </li>
-        `;
+      people.innerHTML = '';
+      buildToDom(windowWidth, equestrian.slice(0, 2));
       more.innerHTML = 'MORE <i class="fa fa-angle-down"></i>';
     }
   });
-} else if (media >= 768) {
-  for (let i = 0; i < equestrian.length; i += 1) {
-    const newLi = document.createElement('li');
-    newLi.classList.add('equestrian-li');
-    newLi.classList.add(equestrian[i].position);
-    newLi.innerHTML = `
-      <img src="${equestrian[i].image}" alt="${equestrian[i].name}">
-        <ul>
-          <li><h4 class="equestrian-name">${equestrian[i].name}</h4></li>
-          <li><p class="equestrian-job">${equestrian[i].specialty}</p></li>
-          <hr class="hr-equestrian">
-          <li class="old">${equestrian[i].age} years old</li>
-          <li>${equestrian[i].description}</li>
-        </ul>
-      `;
-    people.appendChild(newLi);
-  }
-
+} else {
+  buildToDom(windowWidth, equestrian);
   more.parentElement.removeChild(more);
 }

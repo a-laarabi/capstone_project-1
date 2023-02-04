@@ -15,8 +15,12 @@ a {
   text-decoration: none;
 }
 
+.container {
+  padding: 10%;
+}
+
 .hr-title {
-  border-color: #ec5242;
+  border-color: transparent;
   background-color: #ec5242;
   width: 5%;
   margin: 0 auto;
@@ -35,18 +39,29 @@ a {
 }
 
 header {
-  min-height: 100vh;
-  width: 100%;
   background: linear-gradient(rgba(39, 42, 49, 0.1), rgba(39, 42, 49, 0.7)), url(img/bg-header.jpg);
   background-attachment: fixed;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 0 0 100px 0;
   padding-bottom: 50px;
 }
 
 .logo-section {
   display: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 5px;
+  float: left;
+  color: #272727;
+}
+
+.logo {
+  width: 50px;
+}
+
+.text-logo {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
 nav {
@@ -133,7 +148,7 @@ nav {
 /* ############## Info ############## */
 
 .info {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .info h1 {
@@ -148,10 +163,8 @@ nav {
   background-attachment: fixed;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-left: 10%;
-  margin-top: 40px;
+  margin: 10%;
   text-align: center;
-  width: 80%;
   font-family: 'COCOGOOSE', sans-serif;
   font-weight: 500;
   font-size: 2.5rem;
@@ -166,7 +179,7 @@ nav {
   background-color: #d3d3d3;
   border: 2px solid #fff;
   border-radius: 8px;
-  padding: 8px;
+  padding: 10px;
   color: #272727;
 }
 
@@ -178,7 +191,6 @@ nav {
 
 .date h3 {
   font-family: 'COCOGOOSE', sans-serif;
-  font-weight: 700;
 }
 
 .date h4 {
@@ -195,31 +207,28 @@ body {
   background-blend-mode: darken;
 }
 
-.program {
-  margin-top: -100px;
-}
-
 .inside_program {
   width: 90%;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .program_title {
   text-align: center;
   color: #d3d3d3;
   font-family: 'COCOGOOSE', sans-serif;
-  font-weight: 500;
   font-size: 1.5rem;
 }
 
 .ul-inside_program {
   background-color: rgba(255, 255, 255, 0.1);
   margin-top: 20px;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   gap: 20px;
   align-items: center;
+  min-height: 200px;
+  border-radius: 15px;
 }
 
 .ul-inside_program * {
@@ -255,7 +264,7 @@ body {
   font-family: 'COCOGOOSE', sans-serif;
   font-weight: 100;
   font-size: 1.1rem;
-  width: 70%;
+  width: 80%;
 }
 
 .hr-program {
@@ -267,7 +276,6 @@ body {
 .equestrian {
   border-radius: 100px 0 0 0;
   background: #fff;
-  margin-top: 60px;
   padding-bottom: 60px;
 }
 
@@ -319,12 +327,12 @@ body {
 .more {
   cursor: pointer;
   display: block;
-  width: 60%;
-  margin: 60px auto;
+  width: 100%;
+  margin: 40px auto;
   background: #fff;
   border: 1px solid #272727;
   font-size: 15px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .fa {
@@ -332,15 +340,48 @@ body {
 }
 
 /* ############## partner ############## */
-.partner {
-  display: none;
-}
-
+.partner,
 .rights {
   display: none;
 }
 
+.partner {
+  background: #414246;
+  border-radius: 0 100px 0 0;
+  margin-top: -100px;
+  padding-bottom: 50px;
+}
+
+.partner_title {
+  padding-top: 50px;
+  color: #d3d3d3;
+  text-align: center;
+  font-family: 'COCOGOOSE', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.ul-partner {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  justify-content: center;
+}
+
+.ul-partner li {
+  flex-direction: row;
+}
+
+.icone_partner {
+  width: auto;
+  height: 30px;
+}
+
 @media (min-width: 768px) {
+  .container {
+    padding: 5%;
+  }
+
   /* ############## HEADER ############## */
   .black_nav {
     background: #3e3e3e;
@@ -354,7 +395,6 @@ body {
 
   .black_nav ul {
     display: flex;
-    flex-direction: row;
     gap: 30px;
     justify-content: end;
     padding: 10px 0;
@@ -378,22 +418,7 @@ body {
   }
 
   .logo-section {
-    cursor: pointer;
     display: flex;
-    align-items: center;
-    gap: 5px;
-    float: left;
-    color: #272727;
-    margin-top: 12px;
-  }
-
-  .logo {
-    width: 50px;
-  }
-
-  .text-logo {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
   }
 
   .burger {
@@ -436,22 +461,18 @@ body {
 
   .info h1 {
     margin-left: 5%;
-    margin-top: 100px;
     font-size: 2rem;
   }
 
   .info h2 {
-    margin-top: 15px;
-    margin-left: 5%;
+    margin: 5%;
     text-align: left;
     font-size: 3.2rem;
   }
 
   .info .info_border {
-    margin-top: 10px;
     width: 60%;
     font-size: 20px;
-    padding: 10px;
     background: #f7f7f7;
   }
 
@@ -462,17 +483,28 @@ body {
   /* ############## Main Program ############## */
 
   .ul-program {
-    width: 80%;
-    margin: auto;
     display: flex;
-    flex-direction: row;
-    gap: 4px;
+    gap: 5px;
   }
 
   .ul-inside_program {
-    display: flex;
     flex-direction: column;
-    justify-items: center;
+  }
+
+  .ul-inside_program:nth-child(2) {
+    transition-delay: 100ms;
+  }
+
+  .ul-inside_program:nth-child(3) {
+    transition-delay: 200ms;
+  }
+
+  .ul-inside_program:nth-child(4) {
+    transition-delay: 300ms;
+  }
+
+  .ul-inside_program:nth-child(5) {
+    transition-delay: 400ms;
   }
 
   .ul-inside_program:hover {
@@ -493,7 +525,6 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     padding: 0;
-    margin-bottom: 0;
   }
 
   .hr-program {
@@ -508,25 +539,15 @@ body {
   }
 
   .inside_equestrian {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
   }
 
   .equestrian-ul {
     display: grid;
-    grid-template-columns: 47% 6% 47%;
-    grid-gap: 20px;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
     margin-bottom: 80px;
-  }
-
-  .equestrian .left {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  .equestrian .right {
-    grid-column-start: 3;
-    grid-column-end: 4;
   }
 
   .more {
@@ -539,14 +560,23 @@ body {
     border-color: #414246;
   }
 
+  .equestrian-li:nth-child(2) {
+    transition-delay: 200ms;
+  }
+
+  .equestrian-li:nth-child(4) {
+    transition-delay: 200ms;
+  }
+
+  .equestrian-li:nth-child(6) {
+    transition-delay: 200ms;
+  }
+
   /* ############## partner ############## */
 
   .partner {
     display: block;
-    background: #414246;
     border-radius: 0 100px 0 0;
-    margin-top: -100px;
-    padding-bottom: 50px;
   }
 
   .partner_title {
@@ -561,8 +591,7 @@ body {
   .ul-partner {
     display: flex;
     gap: 20px;
-    margin-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
     justify-content: center;
   }
 
@@ -570,30 +599,29 @@ body {
     flex-direction: row;
   }
 
-  .icone_partner {
-    width: auto;
-    height: 30px;
-  }
-
   /* ############## rights ############## */
   .rights {
-    display: block;
     background: #f2f2f2;
-    height: 100px;
-  }
-
-  .inside-rights {
-    width: 70%;
-    margin: auto;
-  }
-
-  .rights .logo-section {
-    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 35px 0;
   }
 
   .rights p {
-    padding-top: 40px;
-    margin-left: 45%;
     font-size: 1.3rem;
   }
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
